@@ -12,7 +12,7 @@ const yarnBuildTask = {
 			const resourcePath = GetResourcePath(resourceName);
 			
 			const packageJson = path.resolve(resourcePath, 'package.json');
-			const yarnLock = path.resolve(resourcePath, '.yarn.installed');
+			const yarnLock = path.resolve(resourcePath, 'yarn.lock');
 			
 			const packageStat = fs.statSync(packageJson);
 			
@@ -23,7 +23,7 @@ const yarnBuildTask = {
 					return true;
 				}
 			} catch (e) {
-				// no yarn.installed, but package.json - install time!
+				// no yarn.lock, but package.json - install time!
 				return true;
 			}
 		} catch (e) {
@@ -57,8 +57,13 @@ const yarnBuildTask = {
 					}
 
 					const resourcePath = GetResourcePath(resourceName);
-					const yarnLock = path.resolve(resourcePath, '.yarn.installed');
-					fs.writeFileSync(yarnLock, '');
+					const yarnLock = path.resolve(resourcePath, 'yarn.lock');
+
+					try {
+						fs.utimesSync(yarnLock, new Date(), new Date());
+					} catch (e) {
+
+					}
 
 					buildingInProgress = false;
 					currentBuildingModule = '';

@@ -98,16 +98,19 @@ AddEventHandler('playerConnecting', function(name, setKickReason)
 	for k,v in ipairs(GetPlayerIdentifiers(source))do
 		if string.sub(v, 1, string.len(settings.defaultSettings.identifierUsed .. ":")) == (settings.defaultSettings.identifierUsed .. ":") then
 			id = v
+			TriggerEvent('chat:addMessage', {
+				color = { 255, 0, 0},
+				multiline = true,
+				args = {"Me", v} -- This should send the message containing my id
+			  })
 			break
 		end
 	end
 
-	--[[
 	if not id then
 		setKickReason("Unable to find SteamID, please relaunch FiveM with steam open or restart FiveM & Steam if steam is already open")
 		CancelEvent()
 	end
-	--]]
 end)
 
 RegisterServerEvent('es:firstJoinProper')
@@ -123,7 +126,7 @@ AddEventHandler('es:firstJoinProper', function()
 		end
 
 		if not id then
-			--DropPlayer(Source, "SteamID not found, please try reconnecting with Steam open.")
+			DropPlayer(Source, "SteamID not found, please try reconnecting with Steam open.")
 		else
 			registerUser(id, Source)
 			justJoined[Source] = true
