@@ -153,7 +153,7 @@ Config.Jobs.miner = {
 		},
 
 		VehicleDeletePoint = {
-			Pos = {x = 881.93, y = -2198.01, z = 29.51},
+			Pos = {x = 880.79, y = -2192.67, z = 29.51},
 			Size = {x = 5.0, y = 5.0, z = 1.0},
 			Color = {r = 255, g = 0, b = 0},
 			Marker = 1,
@@ -244,7 +244,7 @@ Config.Jobs.miner = {
 			GPS = {x = -621.04, y = -228.53, z = 37.05}
 		},
 
-		DiamondDelivery = {
+		DiamondDelivery = { -- This delivery point was in the base pack
 			Pos = {x = -621.04, y = -228.53, z = 37.05},
 			Color = {r = 204, g = 204, b = 0},
 			Size = {x = 5.0, y = 5.0, z = 3.0},
@@ -255,7 +255,7 @@ Config.Jobs.miner = {
 			Type = 'delivery',
 			Spawner = 1,
 			Item = {
-				{
+				{ 
 					name = _U('delivery'),
 					time = 0.5,
 					remove = 1,
@@ -268,7 +268,32 @@ Config.Jobs.miner = {
 			},
 			Hint = _U('m_deliver_diamond'),
 			GPS = {x = 2962.40, y = 2746.20, z = 42.39}
-		}
+		},
 
+		DiamondDelivery2 = { -- An attempt to temporarily band-aid the broken interior
+		Pos = {x = -634.45, y = -240.07, z = 37},
+		Color = {r = 204, g = 204, b = 0},
+		Size = {x = 5.0, y = 5.0, z = 5.0},
+		Color = {r = 204, g = 204, b = 0},
+		Marker = 1,
+		Blip = true,
+		Name = _U('m_sell_diamond'),
+		Type = 'delivery',
+		Spawner = 1,
+		Item = {
+			{ 
+				name = _U('delivery'),
+				time = 0.5,
+				remove = 1,
+				max = 50, -- if not present, probably an error at itemQtty >= item.max in esx_jobs_sv.lua
+				price = 250,
+				requires = 'diamond',
+				requires_name = _U('m_diamond'),
+				drop = 100
+			}
+		},
+		Hint = _U('m_deliver_diamond'),
+		GPS = {x = 2962.40, y = 2746.20, z = 42.39}
+	}
 	}
 }

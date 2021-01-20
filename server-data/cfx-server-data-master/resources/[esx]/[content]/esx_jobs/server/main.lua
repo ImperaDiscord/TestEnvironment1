@@ -59,7 +59,7 @@ Citizen.CreateThread(function()
 							end
 						end
 			
-						if data.jobItem[1].requires ~= 'nothing' then
+						if data.jobItem[1].requires ~= 'nothing' then -- If the job requires something in your inventory
 							local itemToRemoveQtty = xPlayer.getInventoryItem(data.jobItem[1].requires).count
 							if itemToRemoveQtty > 0 then
 								xPlayer.removeInventoryItem(data.jobItem[1].requires, data.jobItem[1].remove)

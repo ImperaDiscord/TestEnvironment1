@@ -9,7 +9,7 @@ CREATE TABLE `users` (
 	`job` VARCHAR(20) NULL DEFAULT 'unemployed',
 	`job_grade` INT NULL DEFAULT 0,
 	`loadout` LONGTEXT NULL DEFAULT NULL,
-	`position` VARCHAR(255) NULL DEFAULT '{"x":-269.4,"y":-955.3,"z":31.2,"heading":205.8}',
+	`position` VARCHAR(255) NULL DEFAULT '{"x":116,"y":-1282,"z":28,"heading":214}',
 
 	PRIMARY KEY (`identifier`)
 );

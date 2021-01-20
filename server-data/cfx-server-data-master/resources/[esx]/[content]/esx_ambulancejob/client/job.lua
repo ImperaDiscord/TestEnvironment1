@@ -129,8 +129,8 @@ end
 function revivePlayer(closestPlayer)
 	isBusy = true
 
-	ESX.TriggerServerCallback('esx_ambulancejob:getItemAmount', function(quantity)
-		if quantity > 0 then
+	--ESX.TriggerServerCallback('esx_ambulancejob:getItemAmount', function(quantity)
+		--if quantity > 0 then
 			local closestPlayerPed = GetPlayerPed(closestPlayer)
 
 			if IsPedDeadOrDying(closestPlayerPed, 1) then
@@ -153,9 +153,9 @@ function revivePlayer(closestPlayer)
 			end
 		else
 			ESX.ShowNotification(_U('not_enough_medikit'))
-		end
+		--end
 		isBusy = false
-	end, 'medikit')
+	--end, 'medikit')
 end
 
 function FastTravel(coords, heading)

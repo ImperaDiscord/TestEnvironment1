@@ -23,7 +23,7 @@ function OpenShopMenu(zone)
 		local item = Config.Zones[zone].Items[i]
 
 		table.insert(elements, {
-			label      = ('%s - <span style="color:green;">%s</span>'):format(item.label, _U('shop_item', ESX.Math.GroupDigits(item.price))),
+			label      = ('%s - ~g~%s'):format(item.label, _U('shop_item', ESX.Math.GroupDigits(item.price))),
 			itemLabel = item.label,
 			item       = item.item,
 			price      = item.price,

@@ -525,7 +525,7 @@ function OpenFineCategoryMenu(player, category)
 
 		for k,fine in ipairs(fines) do
 			table.insert(elements, {
-				label     = ('%s <span style="color:green;">%s</span>'):format(fine.label, _U('armory_item', ESX.Math.GroupDigits(fine.amount))),
+				label     = ('%s ~g~%s'):format(fine.label, _U('armory_item', ESX.Math.GroupDigits(fine.amount))),
 				value     = fine.id,
 				amount    = fine.amount,
 				fineLabel = fine.label
@@ -628,7 +628,7 @@ function OpenUnpaidBillsMenu(player)
 	ESX.TriggerServerCallback('esx_billing:getTargetBills', function(bills)
 		for k,bill in ipairs(bills) do
 			table.insert(elements, {
-				label = ('%s - <span style="color:red;">%s</span>'):format(bill.label, _U('armory_item', ESX.Math.GroupDigits(bill.amount))),
+				label = ('%s - ~r~%s'):format(bill.label, _U('armory_item', ESX.Math.GroupDigits(bill.amount))),
 				billId = bill.id
 			})
 		end
@@ -739,12 +739,12 @@ function OpenBuyWeaponsMenu()
 					local hasComponent = HasPedGotWeaponComponent(playerPed, GetHashKey(v.weapon), component.hash)
 
 					if hasComponent then
-						label = ('%s: <span style="color:green;">%s</span>'):format(component.label, _U('armory_owned'))
+						label = ('%s: ~g~%s'):format(component.label, _U('armory_owned'))
 					else
 						if v.components[i] > 0 then
-							label = ('%s: <span style="color:green;">%s</span>'):format(component.label, _U('armory_item', ESX.Math.GroupDigits(v.components[i])))
+							label = ('%s: ~g~%s'):format(component.label, _U('armory_item', ESX.Math.GroupDigits(v.components[i])))
 						else
-							label = ('%s: <span style="color:green;">%s</span>'):format(component.label, _U('armory_free'))
+							label = ('%s: ~g~%s'):format(component.label, _U('armory_free'))
 						end
 					end
 
@@ -764,12 +764,12 @@ function OpenBuyWeaponsMenu()
 		if hasWeapon and v.components then
 			label = ('%s: <span style="color:green;">></span>'):format(weapon.label)
 		elseif hasWeapon and not v.components then
-			label = ('%s: <span style="color:green;">%s</span>'):format(weapon.label, _U('armory_owned'))
+			label = ('%s: ~g~%s'):format(weapon.label, _U('armory_owned'))
 		else
 			if v.price > 0 then
-				label = ('%s: <span style="color:green;">%s</span>'):format(weapon.label, _U('armory_item', ESX.Math.GroupDigits(v.price)))
+				label = ('%s: ~g~%s'):format(weapon.label, _U('armory_item', ESX.Math.GroupDigits(v.price)))
 			else
-				label = ('%s: <span style="color:green;">%s</span>'):format(weapon.label, _U('armory_free'))
+				label = ('%s: ~g~%s'):format(weapon.label, _U('armory_free'))
 			end
 		end
 

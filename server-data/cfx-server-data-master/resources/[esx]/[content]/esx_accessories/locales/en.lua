@@ -1,6 +1,6 @@
 Locales ['en'] = {
   ['valid_purchase'] = 'validate this purchase?',
-  ['yes'] = 'yes (<span style="color: green;">$%s</span>)',
+  ['yes'] = 'yes ~g~$%s',
   ['no'] = 'no',
   ['helmet'] = 'helmet / Hat',
   ['glasses'] = 'glasses',

@@ -16,8 +16,9 @@ Config.FixePhone = {
   },
 }
 
-Config.KeyOpenClose = 288 -- F1
-Config.KeyTakeCall  = 38  -- E
+Config.KeyOpenClose = 323 -- keyboard x or gamepad [NONE]
+
+Config.KeyTakeCall  = 38  -- E or gamepad [LB]
 
 Config.UseMumbleVoIP = false -- Use Frazzle's Mumble-VoIP Resource (Recommended!) https://github.com/FrazzIe/mumble-voip
 Config.UseTokoVoIP   = false

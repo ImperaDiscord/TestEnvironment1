@@ -272,8 +272,8 @@ ESX.RegisterServerCallback('esx_advancedvehicleshop:buyVehicleAJ', function(sour
 		end
 	end
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice)
+	if modelPrice and xPlayer.getAccount('bank').money  >= modelPrice then
+		xPlayer.removeAccountMoney('bank', modelPrice)
 
 		MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, type, job, category, name) VALUES (@owner, @plate, @vehicle, @type, @job, @category, @name)', {
 			['@owner'] = xPlayer.identifier,
@@ -356,8 +356,8 @@ ESX.RegisterServerCallback('esx_advancedvehicleshop:buyVehiclePJ', function(sour
 		end
 	end
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice)
+	if modelPrice and xPlayer.getAccount('bank').money >= modelPrice then
+		xPlayer.removeAccountMoney('bank', modelPrice)
 
 		MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, type, job, category, name) VALUES (@owner, @plate, @vehicle, @type, @job, @category, @name)', {
 			['@owner'] = xPlayer.identifier,
@@ -440,8 +440,8 @@ ESX.RegisterServerCallback('esx_advancedvehicleshop:buyVehicleD', function(sourc
 		end
 	end
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice)
+	if modelPrice and xPlayer.getAccount('bank').money >= modelPrice then
+		xPlayer.removeAccountMoney('bank', modelPrice)
 
 		if xPlayer.job.name == 'ambulance' then
 			if model == Config.Division.Heli1 then
@@ -569,8 +569,8 @@ ESX.RegisterServerCallback('esx_advancedvehicleshop:buyVehicleMJ', function(sour
 		end
 	end
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice)
+	if modelPrice and xPlayer.getAccount('bank').money >= modelPrice then
+		xPlayer.removeAccountMoney('bank', modelPrice)
 
 		MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, type, job, category, name) VALUES (@owner, @plate, @vehicle, @type, @job, @category, @name)', {
 			['@owner'] = xPlayer.identifier,
@@ -653,8 +653,8 @@ ESX.RegisterServerCallback('esx_advancedvehicleshop:buyVehicleA', function(sourc
 		end
 	end
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice)
+	if modelPrice and xPlayer.getAccount('bank').money >= modelPrice then
+		xPlayer.removeAccountMoney('bank', modelPrice)
 
 		MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, type, category, name) VALUES (@owner, @plate, @vehicle, @type, @category, @name)', {
 			['@owner'] = xPlayer.identifier,
@@ -736,8 +736,8 @@ ESX.RegisterServerCallback('esx_advancedvehicleshop:buyVehicleB', function(sourc
 		end
 	end
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice)
+	if modelPrice and xPlayer.getAccount('bank').money >= modelPrice then
+		xPlayer.removeAccountMoney('bank', modelPrice)
 
 		MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, type, category, name) VALUES (@owner, @plate, @vehicle, @type, @category, @name)', {
 			['@owner'] = xPlayer.identifier,
@@ -819,8 +819,8 @@ ESX.RegisterServerCallback('esx_advancedvehicleshop:buyVehicleC', function(sourc
 		end
 	end
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice)
+	if modelPrice and xPlayer.getAccount('bank').money >= modelPrice then
+		xPlayer.removeAccountMoney('bank', modelPrice)
 
 		MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, type, category, name) VALUES (@owner, @plate, @vehicle, @type, @category, @name)', {
 			['@owner'] = xPlayer.identifier,
@@ -902,8 +902,8 @@ ESX.RegisterServerCallback('esx_advancedvehicleshop:buyVehicleT', function(sourc
 		end
 	end
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice)
+	if modelPrice and xPlayer.getAccount('bank').money >= modelPrice then
+		xPlayer.removeAccountMoney('bank', modelPrice)
 
 		MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, type, category, name) VALUES (@owner, @plate, @vehicle, @type, @category, @name)', {
 			['@owner'] = xPlayer.identifier,
@@ -985,8 +985,8 @@ ESX.RegisterServerCallback('esx_advancedvehicleshop:buyVehicleV', function(sourc
 		end
 	end
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice)
+	if modelPrice and xPlayer.getAccount('bank').money >= modelPrice then
+		xPlayer.removeAccountMoney('bank', modelPrice)
 
 		MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, type, category, name) VALUES (@owner, @plate, @vehicle, @type, @category, @name)', {
 			['@owner'] = xPlayer.identifier,
@@ -1068,8 +1068,8 @@ ESX.RegisterServerCallback('esx_advancedvehicleshop:buyVehicleVB', function(sour
 		end
 	end
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice)
+	if modelPrice and xPlayer.getAccount('bank').money >= modelPrice then
+		xPlayer.removeAccountMoney('bank', modelPrice)
 
 		MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, type, category, name) VALUES (@owner, @plate, @vehicle, @type, @category, @name)', {
 			['@owner'] = xPlayer.identifier,

@@ -24,7 +24,7 @@ function OpenVehicleSpawnerMenu(type, station, part, partNum)
 							local vehicleLabel = GetLabelText(GetDisplayNameFromVehicleModel(vehicle.model))
 
 							table.insert(shopElements, {
-								label = ('%s - <span style="color:green;">%s</span>'):format(vehicleLabel, _U('shop_item', ESX.Math.GroupDigits(vehicle.price))),
+								label = ('%s - ~g~%s'):format(vehicleLabel, _U('shop_item', ESX.Math.GroupDigits(vehicle.price))),
 								name  = vehicleLabel,
 								model = vehicle.model,
 								price = vehicle.price,
@@ -60,9 +60,9 @@ function OpenVehicleSpawnerMenu(type, station, part, partNum)
 							local label = ('%s - <span style="color:darkgoldenrod;">%s</span>: '):format(vehicleName, props.plate)
 
 							if v.stored then
-								label = label .. ('<span style="color:green;">%s</span>'):format(_U('garage_stored'))
+								label = label .. ('~g~%s'):format(_U('garage_stored'))
 							else
-								label = label .. ('<span style="color:darkred;">%s</span>'):format(_U('garage_notstored'))
+								label = label .. ('~r~%s'):format(_U('garage_notstored'))
 							end
 
 							table.insert(garage, {

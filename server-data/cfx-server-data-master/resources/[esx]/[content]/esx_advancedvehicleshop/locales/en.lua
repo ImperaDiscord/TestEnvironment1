@@ -7,7 +7,7 @@ Locales['en'] = {
   ['not_yours'] = 'this Vehicle does not belong to you',
   ['sell_menu'] = 'press ~INPUT_CONTEXT~ to sell your ~y~%s~s~ for ~g~$%s~s~',
   ['generic_shopitem'] = '$%s',
-  ['buy_vehicle'] = 'do you want to purchase %s for $%s?',
+  ['buy_vehicle'] = 'do you want to purchase the %s for $%s?',
   ['buy_license'] = 'buy License?',
   ['sold_for'] = 'the ~b~%s~s~ has been ~y~sold~s~ for ~g~$%s~s~',
   ['license_missing'] = 'License Missing',
@@ -38,7 +38,7 @@ Locales['en'] = {
   -- Aircraft Shop
   ['aircraft_menu'] = 'press ~INPUT_CONTEXT~ to access the ~p~Aircraft Shop',
   ['aircraft_dealer'] = 'dealership | Aircraft',
-  ['aircraft_missing'] = 'you don\'t have a Aircraft License!',
+  ['aircraft_missing'] = 'you don\'t have an Aircraft License!',
   ['aircraft_belongs'] = 'an Aircraft with plate ~y~%s~s~ now belongs to ~b~you~s~',
   ['aircraft_purchased'] = 'you bought a Aircraft',
   -- Boat Shop

@@ -7,12 +7,12 @@ AddEventHandler('esx_barbershop:pay', function()
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 
-	xPlayer.removeMoney(Config.Price)
+	xPlayer.removeAccountMoney('bank', Config.Price)
 	TriggerClientEvent('esx:showNotification', source, _U('you_paid', ESX.Math.GroupDigits(Config.Price)))
 end)
 
 ESX.RegisterServerCallback('esx_barbershop:checkMoney', function(source, cb)
 	local xPlayer = ESX.GetPlayerFromId(source)
 
-	cb(xPlayer.getMoney() >= Config.Price)
+	cb(xPlayer.getAccount('bank').money >= Config.Price)
 end)

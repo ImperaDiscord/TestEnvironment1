@@ -101,7 +101,7 @@ AddEventHandler('esx:restoreLoadout', function()
 	for k,v in ipairs(ESX.PlayerData.loadout) do
 		local weaponName = v.name
 		local weaponHash = GetHashKey(weaponName)
-
+		print('in ex_extended/client:', weaponName)
 		GiveWeaponToPed(playerPed, weaponHash, 0, false, false)
 		SetPedWeaponTintIndex(playerPed, weaponHash, v.tintIndex)
 
@@ -180,10 +180,15 @@ end)
 
 RegisterNetEvent('esx:addWeapon')
 AddEventHandler('esx:addWeapon', function(weaponName, ammo)
+	print("We did some whack shit getting ammo to work")
 	local playerPed = PlayerPedId()
 	local weaponHash = GetHashKey(weaponName)
-
-	GiveWeaponToPed(playerPed, weaponHash, ammo, false, false)
+	--if xPlayer.hasWeapon(weaponName) then
+		--print("this is merely a test")
+		--SetPedAmmo(playerPed, weaponHash, weaponAmmo)
+		--print("Did that shit work?")
+	--else		
+		GiveWeaponToPed(playerPed, weaponHash, ammo, false, false)
 end)
 
 RegisterNetEvent('esx:addWeaponComponent')

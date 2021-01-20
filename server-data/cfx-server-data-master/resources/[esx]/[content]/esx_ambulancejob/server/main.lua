@@ -113,7 +113,7 @@ ESX.RegisterServerCallback('esx_ambulancejob:removeItemsAfterRPDeath', function(
 			table.insert(playerLoadout, xPlayer.loadout[i])
 		end
 
-		-- give back wepaons after a couple of seconds
+		-- give back weapons after a couple of seconds
 		Citizen.CreateThread(function()
 			Citizen.Wait(5000)
 			for i=1, #playerLoadout, 1 do

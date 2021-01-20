@@ -17,12 +17,12 @@ Locales['en'] = {
   ['license_lmg'] = 'LMG License',
   ['license_sniper'] = 'Sniper Rifle License',
   -- esx_dmvschool Licenses
-  ['license_commercial'] = 'Commercial License',
-  ['license_drivers'] = 'Drivers License',
-  ['license_driversp'] = 'Drivers Permit',
-  ['license_motorcycle'] = 'Motorcycle License',
+  ['license_drive_truck'] = 'Commercial License',
+  ['license_drive'] = 'Drivers License',
+  ['license_dmv'] = 'Drivers Permit',
+  ['license_drive_bike'] = 'Motorcycle License',
   -- esx_drugs Licenses
-  ['license_weed'] = 'Weed License',
+  ['license_weed_processing'] = 'Weed License',
   -- esx_weashop Licenses
   ['license_weapon'] = 'Weapons License',
 }

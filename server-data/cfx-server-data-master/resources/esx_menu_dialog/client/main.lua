@@ -115,8 +115,8 @@ Citizen.CreateThread(function()
 
 	  	if OpenedMenuCount > 0 then
 
-	      DisableControlAction(0, 1,   true) -- LookLeftRight
-	      DisableControlAction(0, 2,   true) -- LookUpDown
+	      --DisableControlAction(0, 1,   true) -- LookLeftRight
+	      --DisableControlAction(0, 2,   true) -- LookUpDown
 	      DisableControlAction(0, 142, true) -- MeleeAttackAlternate
 	      DisableControlAction(0, 106, true) -- VehicleMouseControlOverride
 

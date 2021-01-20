@@ -225,7 +225,7 @@ function GetAction(data)
 							_label = GetHornName(j) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 						else
 							price = math.floor(vehiclePrice * v.price / 100)
-							_label = GetHornName(j) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+							_label = GetHornName(j) .. ' - ~g~$' .. price
 						end
 						table.insert(elements, {label = _label, modType = k, modNum = j})
 					end
@@ -236,7 +236,7 @@ function GetAction(data)
 							_label = GetPlatesName(j) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 						else
 							price = math.floor(vehiclePrice * v.price / 100)
-							_label = GetPlatesName(j) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+							_label = GetPlatesName(j) .. ' - ~g~$' .. price
 						end
 						table.insert(elements, {label = _label, modType = k, modNum = j})
 					end
@@ -246,7 +246,7 @@ function GetAction(data)
 						_label = _U('neon') .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 					else
 						price = math.floor(vehiclePrice * v.price / 100)
-						_label = _U('neon') .. ' - <span style="color:green;">$' .. price .. ' </span>'
+						_label = _U('neon') .. ' - ~g~$' .. price
 					end
 					table.insert(elements, {label = _label, modType = k, modNum = true})
 				elseif v.modType == 'neonColor' or v.modType == 'tyreSmokeColor' then -- NEON & SMOKE COLOR
@@ -264,7 +264,7 @@ function GetAction(data)
 					for j = 1, #colors, 1 do
 						local _label = ''
 						price = math.floor(vehiclePrice * v.price / 100)
-						_label = colors[j].label .. ' - <span style="color:green;">$' .. price .. ' </span>'
+						_label = colors[j].label .. ' - ~g~$' .. price
 						table.insert(elements, {label = _label, modType = k, modNum = colors[j].index})
 					end
 				elseif v.modType == 'windowTint' then -- WINDOWS TINT
@@ -274,7 +274,7 @@ function GetAction(data)
 							_label = GetWindowName(j) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 						else
 							price = math.floor(vehiclePrice * v.price / 100)
-							_label = GetWindowName(j) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+							_label = GetWindowName(j) .. ' - ~g~$' .. price
 						end
 						table.insert(elements, {label = _label, modType = k, modNum = j})
 					end
@@ -293,7 +293,7 @@ function GetAction(data)
 								_label = GetLabelText(modName) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 							else
 								price = math.floor(vehiclePrice * v.price / 100)
-								_label = GetLabelText(modName) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+								_label = GetLabelText(modName) .. ' - ~g~$' .. price
 							end
 							table.insert(elements, {label = _label, modType = 'modFrontWheels', modNum = j, wheelType = v.wheelType, price = v.price})
 						end
@@ -306,7 +306,7 @@ function GetAction(data)
 							_label = _U('level', j+1) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 						else
 							price = math.floor(vehiclePrice * v.price[j+1] / 100)
-							_label = _U('level', j+1) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+							_label = _U('level', j+1) .. ' - ~g~$' .. price
 						end
 						table.insert(elements, {label = _label, modType = k, modNum = j})
 						if j == modCount-1 then
@@ -318,7 +318,7 @@ function GetAction(data)
 					if currentMods[k] then
 						_label = 'Turbo - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 					else
-						_label = 'Turbo - <span style="color:green;">$' .. math.floor(vehiclePrice * v.price[1] / 100) .. ' </span>'
+						_label = 'Turbo - ~g~$' .. math.floor(vehiclePrice * v.price[1] / 100)
 					end
 					table.insert(elements, {label = _label, modType = k, modNum = true})
 				else
@@ -331,7 +331,7 @@ function GetAction(data)
 								_label = GetLabelText(modName) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 							else
 								price = math.floor(vehiclePrice * v.price / 100)
-								_label = GetLabelText(modName) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+								_label = GetLabelText(modName) .. ' - ~g~$' .. price
 							end
 							table.insert(elements, {label = _label, modType = k, modNum = j})
 						end

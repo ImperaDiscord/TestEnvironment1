@@ -56,7 +56,7 @@ Config.Jobs.tailor = {
 		},
 
 		Fabric = {
-			Pos = {x = 715.95, y = -959.63, z = 29.39},
+			Pos = {x = 715.6, y = -961.78, z = 30.4},
 			Size = {x = 3.0, y = 3.0, z = 1.0},
 			Color = {r = 204, g = 204, b = 0},
 			Marker = 1,

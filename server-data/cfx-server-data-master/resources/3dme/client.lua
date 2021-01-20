@@ -39,7 +39,6 @@ end
 --      - coords : world coordinates to where you want to draw the text
 --      - text : the text to display
 local function Display(ped, text)
-
     local playerPed = PlayerPedId()
     local playerCoords = GetEntityCoords(playerPed)
     local pedCoords = GetEntityCoords(ped)
@@ -79,6 +78,7 @@ end
 RegisterNetEvent('3dme:shareDisplay')
 AddEventHandler('3dme:shareDisplay', function(text, serverId)
     local player = GetPlayerFromServerId(serverId)
+    
     if player ~= -1 then
         local ped = GetPlayerPed(player)
         Display(ped, text)

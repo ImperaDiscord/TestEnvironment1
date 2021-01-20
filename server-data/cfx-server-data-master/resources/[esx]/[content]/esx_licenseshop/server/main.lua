@@ -27,8 +27,8 @@ AddEventHandler('esx_licenseshop:buyLicenseAircraft', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Aircraft
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'aircraft', function()
 			LoadLicenses(_source)
@@ -45,8 +45,8 @@ AddEventHandler('esx_licenseshop:buyLicenseBoating', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Boating
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'boating', function()
 			LoadLicenses(_source)
@@ -63,8 +63,8 @@ AddEventHandler('esx_licenseshop:buyLicenseMelee', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Melee
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'weapon_melee', function()
 			LoadLicenses(_source)
@@ -81,8 +81,8 @@ AddEventHandler('esx_licenseshop:buyLicenseHandgun', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Handgun
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'weapon_handgun', function()
 			LoadLicenses(_source)
@@ -99,8 +99,8 @@ AddEventHandler('esx_licenseshop:buyLicenseSMG', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.SMG
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'weapon_smg', function()
 			LoadLicenses(_source)
@@ -117,8 +117,8 @@ AddEventHandler('esx_licenseshop:buyLicenseShotgun', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Shotgun
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'weapon_shotgun', function()
 			LoadLicenses(_source)
@@ -135,8 +135,8 @@ AddEventHandler('esx_licenseshop:buyLicenseAssault', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Assault
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'weapon_assault', function()
 			LoadLicenses(_source)
@@ -153,8 +153,8 @@ AddEventHandler('esx_licenseshop:buyLicenseLMG', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.LMG
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'weapon_lmg', function()
 			LoadLicenses(_source)
@@ -171,8 +171,8 @@ AddEventHandler('esx_licenseshop:buyLicenseSniper', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Sniper
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'weapon_sniper', function()
 			LoadLicenses(_source)
@@ -189,8 +189,8 @@ AddEventHandler('esx_licenseshop:buyLicenseCommercial', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Commercial
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'drive_truck', function()
 			LoadLicenses(_source)
@@ -207,8 +207,8 @@ AddEventHandler('esx_licenseshop:buyLicenseDrivers', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Drivers
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'drive', function()
 			LoadLicenses(_source)
@@ -225,8 +225,8 @@ AddEventHandler('esx_licenseshop:buyLicenseDriversP', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.DriversP
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'dmv', function()
 			LoadLicenses(_source)
@@ -243,8 +243,8 @@ AddEventHandler('esx_licenseshop:buyLicenseMotorcyle', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Motorcycle
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'drive_bike', function()
 			LoadLicenses(_source)
@@ -261,8 +261,8 @@ AddEventHandler('esx_licenseshop:buyLicenseWeed', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Weed
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'weed_processing', function()
 			LoadLicenses(_source)
@@ -279,8 +279,8 @@ AddEventHandler('esx_licenseshop:buyLicenseWeapon', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local price = Config.Prices.Weapon
 
-	if xPlayer.getMoney() >= price then
-		xPlayer.removeMoney(price)
+	if xPlayer.getAccount('bank').money >= price then
+		xPlayer.removeAccountMoney('bank', price)
 
 		TriggerEvent('esx_license:addLicense', _source, 'weapon', function()
 			LoadLicenses(_source)

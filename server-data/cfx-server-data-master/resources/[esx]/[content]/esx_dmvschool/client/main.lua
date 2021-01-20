@@ -106,7 +106,7 @@ function OpenDMVSchoolMenu()
 
 	if not ownedLicenses['dmv'] then
 		table.insert(elements, {
-			label = (('%s: <span style="color:green;">%s</span>'):format(_U('theory_test'), _U('school_item', ESX.Math.GroupDigits(Config.Prices['dmv'])))),
+			label = (('%s: ~g~%s'):format(_U('theory_test'), _U('school_item', ESX.Math.GroupDigits(Config.Prices['dmv'])))),
 			value = 'theory_test'
 		})
 	end
@@ -114,7 +114,7 @@ function OpenDMVSchoolMenu()
 	if ownedLicenses['dmv'] then
 		if not ownedLicenses['drive'] then
 			table.insert(elements, {
-				label = (('%s: <span style="color:green;">%s</span>'):format(_U('road_test_car'), _U('school_item', ESX.Math.GroupDigits(Config.Prices['drive'])))),
+				label = (('%s: ~g~%s'):format(_U('road_test_car'), _U('school_item', ESX.Math.GroupDigits(Config.Prices['drive'])))),
 				value = 'drive_test',
 				type = 'drive'
 			})
@@ -122,7 +122,7 @@ function OpenDMVSchoolMenu()
 
 		if not ownedLicenses['drive_bike'] then
 			table.insert(elements, {
-				label = (('%s: <span style="color:green;">%s</span>'):format(_U('road_test_bike'), _U('school_item', ESX.Math.GroupDigits(Config.Prices['drive_bike'])))),
+				label = (('%s: ~g~%s'):format(_U('road_test_bike'), _U('school_item', ESX.Math.GroupDigits(Config.Prices['drive_bike'])))),
 				value = 'drive_test',
 				type = 'drive_bike'
 			})
@@ -130,7 +130,7 @@ function OpenDMVSchoolMenu()
 
 		if not ownedLicenses['drive_truck'] then
 			table.insert(elements, {
-				label = (('%s: <span style="color:green;">%s</span>'):format(_U('road_test_truck'), _U('school_item', ESX.Math.GroupDigits(Config.Prices['drive_truck'])))),
+				label = (('%s: ~g~%s'):format(_U('road_test_truck'), _U('school_item', ESX.Math.GroupDigits(Config.Prices['drive_truck'])))),
 				value = 'drive_test',
 				type = 'drive_truck'
 			})
